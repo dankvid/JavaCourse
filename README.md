@@ -1,2 +1,2 @@
 # JavaCourse
-Example Java Programs (For Learning Purposes)
+### Example Java Programs (For Learning Purposes)

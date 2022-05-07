@@ -44,6 +44,12 @@ public class GUI_Beispiel2 extends JFrame {
     }
     
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        }
+        catch (Exception e) {
+            System.err.println("Fehler bei L&F-Einrichtung: " + e);
+        }
         // Eine Instanz der Klasse anlegen und anzeigen
         GUI_Beispiel2 fenster = new GUI_Beispiel2("GUI mit Ereignisbehandlung");
         fenster.pack();

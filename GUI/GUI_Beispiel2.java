@@ -7,12 +7,6 @@ public class GUI_Beispiel2 extends JFrame {
     // Die eigenen Adapter- und Listener-Klassen als 
     // innere Klassen innerhalb der Klasse 
     // GUI_Beispiel2 definieren
-    class MeinWindowLauscher extends WindowAdapter {
-        public void windowClosing(WindowEvent e) {
-            // Das Programm beendet
-            System.exit(0);
-        }
-    }
     
     class MeinActionLauscher implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -38,8 +32,8 @@ public class GUI_Beispiel2 extends JFrame {
         add(und);
         add(gretel);
         
-        // Den Frame bei einem WindowListener anmelden
-        addWindowListener(new MeinWindowLauscher());
+        // Anwendung schließen, wenn Fenster geschlossen wird
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         
         // ActionListener für die Schaltflächen registrieren
         // Es wird jedes mal eine neue Instanz angelegt.
